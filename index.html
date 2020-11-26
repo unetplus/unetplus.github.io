@@ -31,7 +31,7 @@
         <h2 class="col-md-12 text-center" style="padding-bottom:20px">
 
             <b>U-NetPlus: A Modified Encoder-Decoder U-Net Architecture for Semantic and Instance Segmentation of Surgical Instruments from Laparoscopic Images</br></b>
-            <span style="font-size:18pt"> EMBC 2020, Oral </span>
+            <span style="font-size:18pt"> EMBC 2019, Oral </span>
             <br>
         </h2>
 
@@ -60,7 +60,7 @@
         <div class="col-md-6 col-md-offset-3 text-center">
             <ul class="nav nav-pills nav-justified">
                 <li>
-                    <a href="https://arxiv.org/abs/2004.11253">
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7372295/">
                         <h4><strong>[ Paper ]</strong></h4>
                     </a>
                 </li>
@@ -70,7 +70,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/SMKamrulHasan/lconet">
+                    <a href="https://github.com/SMKamrulHasan/UNetPlus">
                         <h4><strong>[ Code ]</strong></h4>
                     </a>
                 </li>
@@ -113,7 +113,7 @@
             <h3>
                 <b>Dataset</b>
             </h3>
-           For both training and validation, we used the Robotic instruments dataset from the sub-challenge of MICCAI 2017 Endoscopic Vision Challenge [22]. The training dataset has 8 × 225 frame sequences with 2 Hz frame rate of high resolution stereo camera images collected from a da Vinci Xi surgical system during laparoscopic cholecystectomy procedures. The frames were re-sampled from 30 Hz video to 2 Hz to avoid any redundancy issues. A stereo camera was used to capture the video sequences that consists of the left and right eye views with resolution of 1920 × 1080 in RGB format. In each frame, the articulated parts of the robotic surgical instrument consisting of a rigid shaft, an articulated wrist, and claspers, have been manually labeled by expert clinicians. The test set has 8×75 frame sequences and 2×300 frame videos. The challenge is to segment 7 classes such as prograsp forceps, needle driver, vessel sealer, grasping retractor etc.</a>.
+           For both training and validation, we used the Robotic instruments dataset from the sub-challenge of MICCAI 2017 Endoscopic Vision Challenge [22]. The training dataset has 8 × 225 frame sequences with 2 Hz frame rate of high resolution stereo camera images collected from a da Vinci Xi surgical system during laparoscopic cholecystectomy procedures. The frames were re-sampled from 30 Hz video to 2 Hz to avoid any redundancy issues. A stereo camera was used to capture the video sequences that consists of the left and right eye views with resolution of 1920 × 1080 in RGB format. In each frame, the articulated parts of the robotic surgical instrument consisting of a rigid shaft, an articulated wrist, and claspers, have been manually labeled by expert clinicians. The test set has 8×75 frame sequences and 2×300 frame videos. The challenge is to segment 7 classes such as prograsp forceps, needle driver, vessel sealer, grasping retractor etc.
             <br>
         </div>
     </div>
@@ -134,15 +134,7 @@
         </div>
 
         <div class="col-md-8 col-md-offset-2">
-            Modified U-Net with batch-normalized VGG11 as an encoder. Each
-box corresponds to a multi-channel featuring a map passing through a series of
-transformations. It consists of both an upsampling and a downsampling path
-and the height of the box represents the feature map resolution, while the
-width represents number of channels. Cyan arrows represent the max-pooling
-operation, whereas light-green arrows represent skip connections that transfer
-information from the encoder to the decoder. Red upward arrows represent
-the decoder which consists of nearest-neighbor upsampling with a scale factor
-of 2 followed by 2 convolution layers and a ReLU activation function.
+            Modified U-Net with batch-normalized VGG11 as an encoder. Each box corresponds to a multi-channel featuring a map passing through a series of transformations. It consists of both an upsampling and a downsampling path and the height of the box represents the feature map resolution, while the width represents number of channels. Cyan arrows represent the max-pooling operation, whereas light-green arrows represent skip connections that transfer information from the encoder to the decoder. Red upward arrows represent the decoder which consists of nearest-neighbor upsampling with a scale factor of 2 followed by 2 convolution layers and a ReLU activation function.
         </div>
     </div>
 
